@@ -32,7 +32,7 @@ class Game
   
   def start
     while @turns_left > 0 && !@victory
-      puts "Enter your guess for each of the four slots (0-5). #{@turns_left} turns left!"
+      puts "Enter your guess for each of the four slots (0-5). #{@turns_left} turn#{@turns_left > 1 ? "s" : ""} left!"
       guess = gets.chomp.split('').map{|e| e.to_i}
       puts make_guess(guess)
     end
